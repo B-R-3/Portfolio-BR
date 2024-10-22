@@ -367,7 +367,7 @@ textarea::-webkit-scrollbar-thumb {
 /*---------------------PAGE CV--------------------*/
 .space {
     height: 10vh;
-    background-color: aliceblue;
+    background-color: rgba(183, 197, 209, 0.655);
 }
 
 .space img {
@@ -376,7 +376,8 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 #cv img {
-    width: 700px;
+    margin-left: 17%;
+    width: fit-content;
 }
 
 /*---------------------FIN DE PAGE CV--------------------*/
