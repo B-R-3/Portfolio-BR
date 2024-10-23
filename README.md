@@ -1,4 +1,4 @@
-# Portfolio de Développeur Web 💻🖥️
+# Portfolio de (futur) Développeur Web 💻🖥️
 
 Bienvenue sur mon portfolio ! Ce projet est une vitrine de mes compétences et de mes projets réalisés en études et en autonomie. Il présente un design moderne avec une section dédiée à mes projets, organisés sous forme de grille interactive.
 
