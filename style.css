@@ -87,7 +87,7 @@ nav ul li a {
 }
 
 .presentation {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -263,7 +263,7 @@ td:not(:empty):not(:first-child) {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 40vh;
     background-color: #969696;
     font-size: 40px;
     color: white;
