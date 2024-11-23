@@ -263,7 +263,7 @@ td:not(:empty):not(:first-child) {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
     background-color: #969696;
     font-size: 40px;
     color: white;
