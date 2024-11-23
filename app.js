@@ -21,23 +21,42 @@ window.addEventListener("scroll", function() {
     var image1 = document.getElementById("B");
     var image2 = document.getElementById("R");
 
-    
-    var separation = scrollPosition / 5; 
+    var opacity = 1 - scrollPosition / 900;
 
-    
-    image1.style.transform = "translateX(-" + separation + "px)";
-    image2.style.transform = "translateX(" + separation + "px)";
+    var separation = scrollPosition / 2; 
+
+
+    if (separation<600) {
+        console.log("opacity", opacity)
+        image1.style.opacity = opacity;
+        image2.style.opacity = opacity;
+        
+        image1.style.transform = "translateX(-" + separation + "px)";
+        image2.style.transform = "translateX(" + separation + "px)";
+        console.log(separation);
+    } 
+
+    if (separation>300) {
+        image1.style.opacity = opacity;
+        image2.style.opacity = opacity;
+    }
+        
 });
 function showTimeline(timelineType) {
     const scolaireTimeline = document.getElementById('timeline-scolaire');
     const proTimeline = document.getElementById('timeline-pro');
+    scolaireTimeline.style.opacity = 0;
+    proTimeline.style.opacity = 0;
 
     if (timelineType === 'scolaire') {
         scolaireTimeline.classList.remove('hidden');
-        proTimeline.classList.add('hidden');
+        proTimeline.style.transition = "1s";
+        proTimeline.style.opacity = 1;
     } else if (timelineType === 'pro') {
         proTimeline.classList.remove('hidden');
-        scolaireTimeline.classList.add('hidden');
+        scolaireTimeline.style.transition = "1s";
+        scolaireTimeline.style.opacity = 1;
+        
     }
 }
 var modal = document.getElementById("myModal");
