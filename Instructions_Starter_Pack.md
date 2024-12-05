@@ -5,8 +5,9 @@
 - Lancer le logiciel Visual Studio Code sur votre ordinateur.
 
 ## 2. Télécharger le projet
-- Utilisez la commande suivante dans le terminal pour copier le projet :  
-  ```git clone https://github.com/koala819/StarterPack
+- Utilisez la commande suivante dans le terminal de VSC pour copier le projet :
+   ```
+  git clone https://github.com/koala819/StarterPack
   ```
 
 ## 3. Installer Node.js
