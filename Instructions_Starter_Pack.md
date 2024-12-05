@@ -7,7 +7,7 @@
 ## 2. Télécharger le projet
 - Utilisez la commande suivante dans le terminal pour copier le projet :  
   ```
-  git clone [URL_du_projet]
+ git clone https://github.com/koala819/StarterPack
   ```
 
 ## 3. Installer Node.js
