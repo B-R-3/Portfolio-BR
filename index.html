@@ -5,43 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="import" href="projet.html">
-    <script src="app.js" defer></script>
-    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="import" href="pages/projets/projets.html">
     <link rel="icon" href="image/logo-br.png">
+    <script src="scripts/app.js" defer></script>
+    <script src="scripts/loadNav.js" defer></script>
+
+    <title>Portfolio</title>
+
 
 </head>
-<div id="br"></div>
+
+
+<div class="nav-container">     
+
+</div>
 
 <body>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
-    </style>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="logo"><a href="#br"><img src="image/logo-br-modified.png" alt=""></a></div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#br">Home</a></li>
-                        <li><a href="#qui">Qui suis-je ?</a></li>
-                        <li><a href="#competence">Compétences</a></li>
-                        <li><a href="projet.html">Projets</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="image/CV-br.pdf" target= "_blank">CV</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    </div>
-
-
+    <div id="br"></div>
     <div class="container1">
         <div class="presentation">
             <img src="image/B2.png" alt="logo" id="B">
             <img src="image/R2.png" alt="logo" id="R"><br>
         </div>
+        <a href="#qui"><img src="image/arrow.png" alt="logo" id="fleche"></a>
     </div>
     <div id="qui"></div>
 
@@ -94,105 +82,8 @@
             </li>
         </ul>
     </div>
-    <div id="competence" class="competence">
-        <p>Mes Compétences (BTS SIO)</p>
-        </head>
-
-        <body>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Activités</th>
-                        <th>Gérer le patrimoine informatique</th>
-                        <th>Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
-                        <th>Développer la présence en ligne de l'organisation</th>
-                        <th>Travailler en mode projet</th>
-                        <th>Mettre à disposition des utilisateurs un service informatique</th>
-                        <th>Organiser son développement professionnel</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Développement d'un site web de foires aux questions sur la maison des ligues (AppFaq).</td>
-                        <td></td>
-                        <td class="image-cell" data-image="image/preuves/jfr.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/url.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/trel-app.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/appfaq.png">✔</td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td>Développement d'un site de trombinoscope pour une organisation optimale des élèves
-                            (Trombinette). </td>
-                        <td></td>
-                        <td class="image-cell" data-image="image/preuves/stage.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/gitr.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/gitrel.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/mb.png">✔</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>GLPI / OCSInventory</td>
-                        <td class="image-cell" data-image="image/preuves/glpi2.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/glpi.png">✔</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>LinkedIn</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="https://www.linkedin.com/in/brandon-molina-serna-78361122a/">✔</td></a>
-                    </tr>
-                    <tr>
-                        <td>Conception et déploiement d'une page web dédiée sur mon portfolio
-                            en ligne, permettant : <br>
-                            - De mettre en place un environnement d'apprentissage personnel <br>
-                            - Gérer son identité professionnelle <br>
-                            - Développer son projet professionnel</td>
-                        <td></td>
-                        <td></td>
-                        <td>✔</td>
-                        <td></td>
-                        <td></td>
-                        <td>✔</td>
-                    </tr>
-                    <tr>
-                        <td>Installation et configuration de machines virtuelles Windows, Windows Server et Linux
-                            (Debian/Ubuntu) sous Oracle VM Vitualbox et Vmware Workstation Pro</td>
-                        <td class="image-cell" data-image="image/preuves/VM.png">✔</td>
-                        <td class="image-cell" data-image="image/preuves/ubuntu.png">✔</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- Le pop-up modal -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <img id="modalImage" src="" alt="Image associée">
-                </div>
-            </div>
-
-    </div>
-    <div id="ex">
-        <p>Exemple:</p>
-    </div>
-    <div class="pdf"><a href="image/E4 2024 - Tableau des compétences - Tableau de synthèse Épreuve E4.pdf" target= "_blank"><img
-                src="image/pdf-2.png" alt=""></a></div>
-
-
+    
+<!-- 
     <div class="veille">
         <h1>Veille Technologique</h1>
         <p>Thème: Sécurité et Sûreté</p><br>
@@ -202,60 +93,25 @@
 
     </div>
     <div class="doc">
-        <a
-            href="https://www.01net.com/actualites/cyberattaque-frappe-londres-confinement-ransomware.html?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard" target= »_blank »><img
-                src="image/preuves/londres.png" alt="londres"></a>
-        <a
-            href="https://fr.motorsport.com/motogp/news/logiciel-informatique-sauve-vies-motogp/10640459/?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard" target= »_blank »><img
-                src="image/preuves/gp.png" alt="motogp"></a>
-        <a
-            href="https://www.begeek.fr/quel-gestionnaire-de-mots-de-passe-choisir-en-2024-403226?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard" target= »_blank »><img
-                src="image/preuves/mdp.png" alt="mdp"></a>
-    </div>
+        <a href="https://www.01net.com/actualites/cyberattaque-frappe-londres-confinement-ransomware.html?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard"
+            target=»_blank »><img src="image/preuves/londres.png" alt="londres"></a>
+        <a href="https://fr.motorsport.com/motogp/news/logiciel-informatique-sauve-vies-motogp/10640459/?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard"
+            target=»_blank »><img src="image/preuves/gp.png" alt="motogp"></a>
+        <a href="https://www.begeek.fr/quel-gestionnaire-de-mots-de-passe-choisir-en-2024-403226?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard"
+            target=»_blank »><img src="image/preuves/mdp.png" alt="mdp"></a>
+    </div> -->
+
+    <!-- Formulaire de contact -->
+    <div id="contact" class="contact"></div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts JavaScript -->
+    <script src="scripts/LoadContact.js" defer></script>
+    <script src="scripts/LoadFooter.js" defer></script>
 
 
-
-
-
-
-
-
-    <!---------------------------------------------------- contact-------------------------------------------------------------->
-    <div class="title">
-        <h1>Me contacter</h1>
-    </div>
-
-
-    <div id="contact" class="contact">
-        <form action="https://formsubmit.co/brandon.molina003@gmail.com" method="POST">
-            <h1>Formulaire de contact</h1>
-            <input type="text" id="Nom" name="nom" placeholder="Nom" required>
-            <input type="text" id="Prenom" name="prenom" placeholder="Prénom" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="mobile" id="mobile" name="tel" placeholder="Tel" required>
-            <h4>Laissez place à votre imagination ... </h4>
-            <textarea name="msg" placeholder="écrivez ici !" required></textarea>
-            <input type="submit" value="Envoyer" id="button">
-        </form>
-
-
-    </div>
-
-
-
-    <footer>
-        <div class="footer-content">
-            <h3>Mon portfolio</h3>
-            <p>Merci de visiter mon site web. J'espère vous revoir bientôt !</p>
-            <ul class="socials">
-                <li><a href="https://www.linkedin.com/in/brandon-molina-serna-78361122a/" target= »_blank »><i
-                            class="fab fa-linkedin"></i> LinkedIn</a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Mon Portfolio | Design par <a href="#">BR</a></p>
-        </div>
-    </footer>
 </body>
 
 </html>

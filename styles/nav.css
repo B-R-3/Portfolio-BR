@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+/* Conteneur principal de la navigation */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Agdasima", sans-serif;
+}
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 1); /* Fond noir */
+    display: flex; /* Flexbox pour alignement */
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: space-between; /* Place le logo à gauche et le menu au centre */
+    padding: 0 30px; /* Marges internes pour respirer */
+    box-sizing: border-box;
+    height: 70px; /* Hauteur fixe pour une barre de navigation uniforme */
+}
+
+/* Logo à gauche */
+.logo {
+    display: flex; /* Flex pour alignement vertical */
+    align-items: center;
+}
+
+.logo img {
+    height: 35px; /* Hauteur spécifique pour le logo */
+    width: auto;
+    padding-left: 30px; /* Respecte les proportions */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Effet zoom léger au survol */
+}
+
+/* Menu centré */
+.menu {
+    flex: 1; /* Prend tout l'espace disponible */
+    display: flex;
+    justify-content: center; /* Centre horizontalement le menu */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centre les éléments du menu */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espacement entre les liens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Taille des liens légèrement augmentée */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+nav ul li a:hover {
+    color: #949494; /* Couleur de surlignage */
+    transition: 0.5s;
+}
+
+/* Ajustement responsive */
+@media screen and (max-width: 768px) {
+    nav {
+        height: auto; /* Adapte la hauteur pour écrans plus petits */
+        flex-direction: column; /* Empile logo et menu */
+        padding: 10px 20px;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Réduit l'espacement sur petits écrans */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Texte réduit */
+    }
+}

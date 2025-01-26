@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+/*----------------------CONTACT--------------------------*/
+.contact {
+    padding: 20px;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.contact form {
+    width: 50vw; /* Largeur de 80% */
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.315); /* Fond semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.contact form h1 {
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact form .form-left,
+.contact form .form-right {
+    width: 48%; /* Divise en deux colonnes */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding-bottom: 10px;
+    background: none;
+    border: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff; /* Ligne fine blanche */
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: #ffffff;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #4a90e2; /* Couleur bleu clair au focus */
+}
+
+.contact form h4 {
+    width: 100%;
+    color: #fff;
+    font-weight: 400;
+    margin:20px;
+    text-align: center;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 25px;
+}
+
+.contact form #button {
+    position: relative;
+    margin: auto;
+    width: 150px;
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact form #button:hover {
+    background: #4a90e2;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/*---------------------FIN DE CONTACT-------------------*/
