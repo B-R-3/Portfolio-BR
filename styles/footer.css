@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+/*--------------------------PIED DE PAGE-------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Agdasima", sans-serif;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socials li a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.socials li a:hover {
+    color: #2865c2;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+li img{
+    width: 50px;
+    height: 30px;
+}
+
+/*---------------------FIN DE PIED DE PAGE--------------------*/

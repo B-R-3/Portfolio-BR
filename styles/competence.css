@@ -1,0 +1,431 @@
+/*----------------------PGE DE PROJETS----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+h1{
+    color: black;
+    font-size: 3em;
+    margin-bottom: 35px;
+   
+}
+.container p{
+    font-size: 2em; 
+    margin-bottom: 35px;
+}
+.card__article h1{
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    
+}
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 6.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.card__img {
+  width: 328px;
+  height:310px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: flex;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+  overflow: none;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+  text-align: left;
+}
+.modal-content h1{
+    text-align: center;
+    font-size: 35px;
+}
+#modalDescription{
+    text-align: left;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer horizontalement le titre */
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 70%;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.modal-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-column, .right-column {
+  flex: 0 1 45%; /* Chaque colonne occupe environ 45% de l'espace */
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal-columns {
+      flex-direction: column; /* Passe en mode colonne sur petits écrans */
+      align-items: center;
+  }
+  .left-column, .right-column {
+      flex: 0 1 100%;
+  }
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+h1 {
+  
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+      flex-direction: column; /* Les colonnes passent en mode vertical sur petits écrans */
+  }
+  .modal-column {
+      flex: 0 1 100%;
+      margin-bottom: 20px;
+  }
+}
+
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+/*--------------------modal--------------------*/
+.modal {
+  display: none;
+ 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  text-align:start;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.modal-columns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#modalDescription {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*----------------------TABLEAU DE COMPETENCES--------------------------------*/
+.competence {
+    margin-top: 200px;
+    text-align: center;
+    color: black;
+}
+
+.competence p {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+table {
+    margin: 20px auto;
+    width: 65%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+td:not(:empty):not(:first-child) {
+    background-color: #d5f5d6;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1500px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+/*---------------------FIN DE TABLEAU DE COMPETENCE--------------------*/

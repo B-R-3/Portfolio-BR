@@ -1,0 +1,97 @@
+/*----------------------PGE DE PROJETS----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Agdasima", sans-serif;
+}
+
+.w1 {
+    position: fixed;
+    /* Image fixe au défilement */
+    top: 0;
+    z-index: 10;
+
+}
+.fond {
+    width: 100%;
+    height: 50vh;
+    /* Hauteur de 50% de la hauteur de la fenêtre */
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.94)),
+        url("../../image/asiat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Centre l'image */
+    position: fixed;
+    /* Image fixe au défilement */
+    top: 0;
+    /* Assure que la div est collée en haut */
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fond h1{
+    font-size: 5.5em;
+    z-index: 3;
+}
+
+.projets {
+    background-color: #ffffffe4;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    margin-top: 50vh;/* Laisse de l'espace sous la section `.fond` */
+    position: relative;
+    text-align: center;
+}
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre la grille dans l'axe horizontal */
+    justify-content: center;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limite maximale pour un meilleur alignement centré */
+    margin: 0 auto; /* Centre la grille horizontalement */
+    box-sizing: border-box;
+}
+
+.grid-item {
+    background-color: #89212145;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item:hover {
+    background-color: #892121;
+    transform: scale(1.05);
+}
+
+
+
+.projets {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre la grille dans l'axe horizontal */
+    justify-content: center;
+    background-color: #ffffffe4;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    margin-top: 50vh; /* Laisse de l'espace sous la section `.fond` */
+    position: relative;
+    text-align: center;
+}
