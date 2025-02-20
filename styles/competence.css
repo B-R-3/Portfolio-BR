@@ -11,17 +11,17 @@ h1{
     color: black;
     font-size: 3em;
     margin-bottom: 35px;
-   
+
 }
 .container p{
-    font-size: 2em; 
+    font-size: 2em;
     margin-bottom: 35px;
 }
 .card__article h1{
     text-align: center;
     margin: 0;
     font-size: 40px;
-    
+
 }
 
 
@@ -66,7 +66,7 @@ body {
 img {
   display: block;
   max-width: 100%;
-  
+
 }
 
 /*=============== CARD ===============*/
@@ -80,13 +80,12 @@ img {
 .card__container {
   display: grid;
   row-gap: 2rem;
-  column-gap: 6.5rem;
-}
+  column-gap: 1rem;}
 
 .card__article {
   position: relative;
   overflow: hidden;
-  
+  column-gap: 60px;
 }
 
 .card__img {
@@ -194,7 +193,7 @@ ul {
 }
 
 h1 {
-  
+
   margin-bottom: 15px;
   text-align: center;
 }
@@ -300,6 +299,8 @@ h1 {
 
   .card__container {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 7rem;
+
   }
   .card__img {
     width: 348px;
@@ -312,7 +313,7 @@ h1 {
 /*--------------------modal--------------------*/
 .modal {
   display: none;
- 
+
   position: fixed;
   z-index: 1000;
   left: 0;

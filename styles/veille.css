@@ -1,0 +1,53 @@
+/*----------------------PGE DE PROJETS----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Agdasima", sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 4em;
+    z-index: 3;
+    text-decoration: underline;
+}
+.veille{
+    margin-left: 20%;
+    width: fit-content;
+}
+.veille h2 {
+    text-align:start;
+    margin-top: 200px;
+    text-decoration: underline;
+    font-size: 2.5em;
+}
+.veille p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: justify;
+
+}
+img{
+    margin: 10% 0 0 20% ;
+    width: 30%;
+    height: 100%;
+}
+.flip{
+    margin-top: 5%;
+    margin-left: 55%;
+    margin-right: 10%;
+    width: fit-content;
+}
+.flip h1{
+    font-size: 3em;
+    z-index: 3;
+    text-decoration: underline;
+    text-align: start;
+}
+.flip p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: justify;
+}

@@ -3,7 +3,7 @@ window.addEventListener("scroll", function () {
     var image1 = document.getElementById("B");
     var image2 = document.getElementById("R");
     const fleche = document.getElementById("fleche");
-    
+
     var opacity = 1 - scrollPosition / 900;
 
     var separation = scrollPosition / 2;
@@ -79,3 +79,4 @@ function showTimeline(timelineType) {
 
     }
 }
+
