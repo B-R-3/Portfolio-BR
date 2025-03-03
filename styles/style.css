@@ -88,7 +88,7 @@ img {
     margin: 0 -40px;
 }
 
-/*---------------QUI SUIS JE ?---------*/
+/*---------------QUI SUIS JE ?------------*/
 #qui {
     height: 15vh;
 }
@@ -189,7 +189,7 @@ button:hover {
 /*---------------------Stacks--------------------*/
 .stacks {
     text-align: center;
-    height: 25vh;
+    height: 25%;
 
 }
 .stacks h1{
