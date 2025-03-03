@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Charger dynamiquement le fichier footer.html
-    fetch("../../composants/footer/footer.html")
+    fetch("composants/footer/footer.html")
         .then(response => {
             if (!response.ok) throw new Error("Erreur de chargement du fichier footer.html");
             return response.text();

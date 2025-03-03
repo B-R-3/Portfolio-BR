@@ -10,18 +10,14 @@
     <link rel="import" href="pages/projets/projets.html">
     <link rel="icon" href="image/logo-br.png">
     <script src="scripts/app.js" defer></script>
-    <script src="scripts/loadNav.js" defer></script>
+    <script src="../../scripts/LoadNav.js" defer></script>
 
     <title>Portfolio</title>
-
-
 </head>
 
 
-<div class="nav-container">
-
+<div class="navbar"></div>
 </div>
-
 <body>
     <div id="br"></div>
     <div class="container1">
@@ -34,16 +30,17 @@
     <div id="qui"></div>
 
     <div class="timeline-container">
-        <div class="qui"><b>Qui voila-je ?</b><br><br>
+        <div class="qui"><b>Quelques présentations ?</b><br><br>
             <div class="p">
-                <p>Je m'appelle Brandon MOLINA SERNA, j'ai 21 ans et j'étudie actuellement en BTS S.I.O à</p>
+                <p>Je suis Brandon MOLINA SERNA, j'ai 21 ans et j'étudie actuellement en BTS S.I.O, dans les Solutions Logicielles et Applications Métiers à</p>
             </div><br> <img src="image/id-_Ln2p_s.png" alt=""><br><br><br><br>
         </div>
 
 
         <div class="button-container">
-            <button onclick="showTimeline('scolaire')">Mon Cursus Scolaire</button>
             <button onclick="showTimeline('pro')">Mon Parcours Pro</button>
+            <button onclick="showTimeline('scolaire')">Mon Cursus Scolaire</button>
+
         </div>
 
         <!-- Frise Scolaire -->
@@ -69,10 +66,6 @@
         <ul class="timeline hidden" id="timeline-pro">
 
             <li class="timeline-item">
-                <h4>2023/2024 - Employé polyvalent</h4>
-                <p>Job etudiant chez Carrefour city</p>
-            </li>
-            <li class="timeline-item">
                 <h4>2024 - Stage</h4>
                 <p>Développeur WEB chez CVIFS FORMATION</p>
             </li>
@@ -80,26 +73,24 @@
                 <h4>2024 - Stage</h4>
                 <p>Développeur WEB chez Institut Limayrac</p>
             </li>
+            <li class="timeline-item">
+                <h4>2025 - Stage</h4>
+                <p>Développeur WEB Dix31.com en Next.js</p>
+            </li>
         </ul>
     </div>
 
-<!--
-    <div class="veille">
-        <h1>Veille Technologique</h1>
-        <p>Thème: Sécurité et Sûreté</p><br>
-        <p>Source(s): 01net, Begeek, Motorsport </p><br>
-        <p>Outil de veille: Flipboard</p><br>
 
-
+    <div class="stacks">
+        <h1>Stack</h1>
+        <img id="next" src="image/nextjs.1024x617.png" alt="next">
+        <img id="react"  src="image/react.1024x911.png" alt="react">
+        <img id="tail"  src="image/tailwind.1024x614.png" alt="tailwind">
+        <img id="php"  src="image/php.1024x539.png" alt="php">
+        <img id="js"  src="image/javascript-js-square.1023x1024.png" alt="js">
+        <img id="java"  src="image/java.755x1024.png" alt="java">
     </div>
-    <div class="doc">
-        <a href="https://www.01net.com/actualites/cyberattaque-frappe-londres-confinement-ransomware.html?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard"
-            target=»_blank »><img src="image/preuves/londres.png" alt="londres"></a>
-        <a href="https://fr.motorsport.com/motogp/news/logiciel-informatique-sauve-vies-motogp/10640459/?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard"
-            target=»_blank »><img src="image/preuves/gp.png" alt="motogp"></a>
-        <a href="https://www.begeek.fr/quel-gestionnaire-de-mots-de-passe-choisir-en-2024-403226?utm_source=flipboard&utm_content=BrandonMOLI38q9%2Fmagazine%2Fmon+flipboard"
-            target=»_blank »><img src="image/preuves/mdp.png" alt="mdp"></a>
-    </div> -->
+
 
     <!-- Formulaire de contact -->
     <div id="contact" class="contact"></div>
