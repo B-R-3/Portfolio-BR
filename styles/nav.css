@@ -70,6 +70,14 @@ nav ul li a:hover {
     color: #949494; /* Couleur de surlignage */
     transition: 0.5s;
 }
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 
 /* Ajustement responsive */
 @media screen and (max-width: 768px) {
