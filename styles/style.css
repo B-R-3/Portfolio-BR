@@ -12,7 +12,6 @@
 
 .container1,
 .container2,
-.timeline-container,
 .competence,
 .contact {
     position: relative;
@@ -35,7 +34,6 @@ body {
     color: rgb(0, 0, 0);
 }
 
-
 /*----------BR-------------*/
 .container1 {
     display: flex;
@@ -46,11 +44,11 @@ body {
     height: 100vh;
 }
 #fleche {
-    width: 50px; /* Taille ajustable */
+    width: 50px;
     height: auto;
     cursor: pointer;
-    animation: bounce 1.5s infinite; /* Animation de rebond */
-    transition: opacity 0.5s ease; /* Transition pour disparition progressive */
+    animation: bounce 1.5s infinite;
+    transition: opacity 0.5s ease;
 }
 
 @keyframes bounce {
@@ -58,13 +56,13 @@ body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-15px); /* Ajustez la hauteur du rebond */
+        transform: translateY(-15px);
     }
 }
 
 .hidden {
-    opacity: 0; /* Rend la flèche invisible */
-    pointer-events: none; /* Désactive les interactions */
+    opacity: 0;
+    pointer-events: none;
 }
 
 #fleche:hover{
@@ -89,9 +87,6 @@ img {
 }
 
 /*---------------QUI SUIS JE ?------------*/
-#qui {
-    height: 15vh;
-}
 
 .p {
     font-size: 25px;
@@ -109,64 +104,95 @@ p {
 }
 
 .timeline-container {
-    width: 100%;
-    height: fit-content;
-    max-width: 1500px;
     margin: 20px auto;
     text-align: center;
 }
 
+/* Boutons */
 .button-container {
+    margin: 30px 0;
     text-align: center;
-    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
-    background-color: #949494;
+    background-color: #575757; /* Bleu professionnel */
     color: white;
-    border: none;
+    border: 1px solid;
     cursor: pointer;
     margin: 5px;
+    border-radius: 8px; /* Coins arrondis */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #000000;
-    transition: 1s;
+    background-color: #152F6E;
+}
+
+button.active {
+    background-color: #374151;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(55, 65, 81, 0.5);
+    transform: scale(1.05);
+}
+
+.vrai{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
 }
 
 .timeline {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    position: relative;
-    padding: 20px 0;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(50px);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 110%;
-    height: 2px;
-    background-color: #949494;
+.timeline.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.timeline.exit {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
 .timeline-item {
-    text-align: center;
-    position: relative;
-    width: calc(100% / 4 - 20px);
-    background-color: #fff;
+    background: #fff;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-left: 4px solid #1E3A8A;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.timeline-item h4 {
+    margin-bottom: 5px;
+    color: #1E3A8A;
+}
+
+.timeline-item p {
+    font-size: 14px;
+    color: #555;
 }
 
 .hidden {
     display: none;
 }
+
 
 /*----------------------FIN DE QUI SUIS JE ?--------------------------------*/
 
@@ -176,7 +202,7 @@ button:hover {
     align-items: center;
     height: 40vh;
     background-color: #969696;
-    font-size: 40px;
+    font-size: 40x;
     color: white;
 }
 
@@ -188,20 +214,75 @@ button:hover {
 
 /*---------------------Stacks--------------------*/
 .stacks {
+    position: relative;
+    z-index: 1;
     text-align: center;
-    height: 25%;
+}
+.stacks h1 {
+   font-size: 3.5rem;
+    position: relative;
+}
 
-}
-.stacks h1{
-    font-size: 3.5em;
-    margin-top: 100px;
-    margin-bottom: 20px;
-}
 .stacks img:hover {
     transform: scale(1.1);
     transition: 0.5s ease-out;
 }
 
+.ad{
+    display: flex;
+    justify-content: center;
+}
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: 25s slide infinite linear;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+  }
+/* Dimensions spécifiques des images */
 #next {
     width: 170px;
     height: 100px;
@@ -232,9 +313,3 @@ button:hover {
     height: 100px;
     margin: 50px;
 }
-
-/*----                      */
-
-/*--------------------- FIN DE STACKS--------------------*/
-
-

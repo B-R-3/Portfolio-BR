@@ -65,18 +65,18 @@ document.addEventListener("DOMContentLoaded", () => {
 function showTimeline(timelineType) {
     const scolaireTimeline = document.getElementById('timeline-scolaire');
     const proTimeline = document.getElementById('timeline-pro');
-    scolaireTimeline.style.opacity = 0;
-    proTimeline.style.opacity = 0;
 
-    if (timelineType === 'scolaire') {
-        scolaireTimeline.classList.remove('hidden');
-        proTimeline.style.transition = "1s";
-        proTimeline.style.opacity = 1;
-    } else if (timelineType === 'pro') {
-        proTimeline.classList.remove('hidden');
-        scolaireTimeline.style.transition = "1s";
-        scolaireTimeline.style.opacity = 1;
-
+    if (timelineType === 'pro') {
+        scolaireTimeline.classList.remove('active');
+        proTimeline.classList.add('active');
+    } else {
+        proTimeline.classList.remove('active');
+        scolaireTimeline.classList.add('active');
     }
 }
+
+
+//roll stack auto
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
 
