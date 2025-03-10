@@ -1,0 +1,94 @@
+[
+    {
+        "id_commande": 1,
+        "id_user": 1,
+        "id_etat": 1,
+        "_date": "2024-10-03 11:36:27",
+        "total_commande": "14.00",
+        "type_conso": 1,
+        "total_nb_produit": null,
+        "lignes": []
+    },
+    {
+        "id_commande": 2,
+        "id_user": 2,
+        "id_etat": 0,
+        "_date": "2024-11-14 08:34:19",
+        "total_commande": "204.67",
+        "type_conso": 1,
+        "total_nb_produit": 18,
+        "lignes": [
+            {
+                "id_ligne_commande": 1,
+                "id_commande": 2,
+                "id_produit": 1,
+                "qte": 6,
+                "total_ligne_ht": "60.00"
+            },
+            {
+                "id_ligne_commande": 2,
+                "id_commande": 2,
+                "id_produit": 3,
+                "qte": 5,
+                "total_ligne_ht": "60.00"
+            },
+            {
+                "id_ligne_commande": 3,
+                "id_commande": 2,
+                "id_produit": 9,
+                "qte": 4,
+                "total_ligne_ht": "56.00"
+            },
+            {
+                "id_ligne_commande": 4,
+                "id_commande": 2,
+                "id_produit": 12,
+                "qte": 3,
+                "total_ligne_ht": "18.00"
+            }
+        ]
+    },
+    {
+        "id_commande": 3,
+        "id_user": 2,
+        "id_etat": 0,
+        "_date": "2024-11-14 08:49:47",
+        "total_commande": "75.96",
+        "type_conso": 1,
+        "total_nb_produit": 8,
+        "lignes": [
+            {
+                "id_ligne_commande": 5,
+                "id_commande": 3,
+                "id_produit": 1,
+                "qte": 4,
+                "total_ligne_ht": "40.00"
+            },
+            {
+                "id_ligne_commande": 6,
+                "id_commande": 3,
+                "id_produit": 4,
+                "qte": 4,
+                "total_ligne_ht": "32.00"
+            }
+        ]
+    },
+    {
+        "id_commande": 4,
+        "id_user": 2,
+        "id_etat": 0,
+        "_date": "2024-11-14 08:55:07",
+        "total_commande": "21.10",
+        "type_conso": 1,
+        "total_nb_produit": 2,
+        "lignes": [
+            {
+                "id_ligne_commande": 7,
+                "id_commande": 4,
+                "id_produit": 1,
+                "qte": 2,
+                "total_ligne_ht": "20.00"
+            }
+        ]
+    }
+]
