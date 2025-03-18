@@ -26,6 +26,7 @@ nav {
 .logo {
     display: flex; /* Flex pour alignement vertical */
     align-items: center;
+    z-index: 11;
 }
 
 .logo img {
@@ -70,6 +71,25 @@ nav ul li a:hover {
     color: #949494; /* Couleur de surlignage */
     transition: 0.5s;
 }
+
+/* Bouton burger menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 11;
+    margin-left: auto;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
 .navbar-fixed {
     position: fixed;
     top: 0;
@@ -79,23 +99,57 @@ nav ul li a:hover {
     visibility: visible !important;
 }
 
-/* Ajustement responsive */
-@media screen and (max-width: 768px) {
-    nav {
-        height: auto; /* Adapte la hauteur pour écrans plus petits */
-        flex-direction: column; /* Empile logo et menu */
-        padding: 10px 20px;
+/* Media query pour le menu burger */
+@media screen and (max-width: 1000px) {
+    .burger-menu {
+        display: flex;
     }
 
     .menu {
-        margin-top: 10px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 80px 2rem;
+        transition: right 0.3s ease;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 10;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
     }
 
     nav ul li {
-        margin: 0 10px; /* Réduit l'espacement sur petits écrans */
+        margin: 0;
+        width: 100%;
+        text-align: left;
     }
 
     nav ul li a {
-        font-size: 14px; /* Texte réduit */
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Animation du burger menu */
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
 }

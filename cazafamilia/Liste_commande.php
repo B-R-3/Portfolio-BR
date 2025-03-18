@@ -38,8 +38,4 @@ $json = json_encode($rows,JSON_PRETTY_PRINT);
 file_put_contents("commandes.json",$json);
  // Renvoie à la page d'accueil car rien ne s'affiche dans le navigateur
 
-
-
-
-
 ?>

@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Détecter la page actuelle
                 let page = window.location.pathname.split("/").pop(); // Récupère le nom du fichier
 
-                if (page === "index.html") { 
-                    // 🚀 Si on est sur index.html, la navbar apparaît après le scroll
+                if (page === "index.html" || page === "") { 
+                    // 🚀 Si on est à la racine ou sur l'index.html, la navbar apparaît après le scroll
                     nav.style.position = "fixed";
                     nav.style.top = "0";
                     nav.style.width = "100%";
@@ -47,6 +47,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     nav.classList.add("navbar-fixed"); 
                     nav.style.opacity = "1";
                     nav.style.visibility = "visible";
+                }
+
+                // Gestion du menu burger
+                const burgerMenu = document.querySelector('.burger-menu');
+                const menu = document.querySelector('.menu');
+
+                if (burgerMenu && menu) {
+                    burgerMenu.addEventListener('click', () => {
+                        burgerMenu.classList.toggle('active');
+                        menu.classList.toggle('active');
+                    });
+
+                    // Fermer le menu quand on clique sur un lien
+                    const menuLinks = document.querySelectorAll('.menu a');
+                    menuLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            burgerMenu.classList.remove('active');
+                            menu.classList.remove('active');
+                        });
+                    });
                 }
             }
         })
