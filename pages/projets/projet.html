@@ -5,45 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de projets - Découvrez mes réalisations en développement web">
     <link rel="stylesheet" href="../../styles/projet.css">
     <!-- Script JavaScript pour charger la navbar et le footer -->
     <script src="../../scripts/LoadFooter.js" defer></script>
     <script src="../../scripts/LoadNav.js" defer></script>
 
-
-
-    <title>Projets</title>
+    <title>Projets | Portfolio</title>
     <link rel="icon" href="../../image/logo-br.png">
 </head>
 
-<div class="navbar"></div>
-</div>
 <body>
-    <div class="fond">
-        <h1>Mes projets</h1>
-    </div>
+    <div class="navbar"></div>
 
-    <div class="projets">
-        <br><br><br>
-        <h2>Voici mes projets réalisés en études et en autonomie :</h2>
-
+    <header class="fond">
+        <h1>Mes Projets</h1>
+    </header>
+    
+    <main class="projets">
+        <h2>Découvrez mes réalisations</h2>
+        
         <div class="grid-container">
-            <a href="../../cazafamilia/Index.php" class="grid-item" target="_blank">CazaFamilia</a>
-            <p>Restaurant web (fictif) dans le cadre d'un projet d'études.<br>Système de connexion, de commande de
-                produit en fonction des disponibilités</p>
-                <a href="#pro" class="grid-item">Trombinoscope</a>
-            <p>Solution de répertoire des étudiants dans mon Institut (Limayrac).<br>Générateur de PDF</p>
+            <article class="project-card">
+                <div class="project-image" id="cazafamilia"></div>
+                <div class="project-overlay">
+                    <h3 class="project-title">CazaFamilia</h3>
+                    <p class="project-subtitle">Restaurant web</p>
+                    <p class="project-description">Site web vitrine pour un restaurant avec système de réservation et menu interactif.</p>
+                    <a href="https://cazafamilia.brandonmolina.fr/" class="project-link">Voir le projet</a>
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-image" id="trombinoscope"></div>
+                <div class="project-overlay">
+                    <h3 class="project-title">Trombinoscope</h3>
+                    <p class="project-subtitle">Répertoire étudiants</p>
+                    <p class="project-description">Solution pour lister les étudiants de l'Institut (Limayrac) avec un générateur de PDF.</p>
+                    <a href="#" class="project-link">Voir le projet</a>
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-image" id="appfaq"></div>
+                <div class="project-overlay">
+                    <h3 class="project-title">AppFaq</h3>
+                    <p class="project-subtitle">Foire aux questions</p>
+                    <p class="project-description">Projet d'études : FAQ sur le sport avec système de connexion et interaction avec admins.</p>
+                    <a href="https://appfaq.brandonmolina.fr/" target="_blank" class="project-link">Voir le projet</a>
+                </div>
+            </article>
 
-            <a href="https://appfaq.brandonmolina.fr/" class="grid-item" target="_blank">AppFaq</a>
-            <p>Page de foire aux questions dans le cadre d'un projet d'études sur le sport.<br>Système de connexion,
-                d'interaction avec les admins en tant qu'utilisateur (questions à poser).</p>
+            <article class="project-card">
+                <div class="project-image" id="next"></div>
+                <div class="project-overlay">
+                    <h3 class="project-title">Next.js</h3>
+                    <p class="project-subtitle">Page explicative de Next.js</p>
+                    <p class="project-description">Stage: mes débuts en Next.js, page interactive tutoriel pour l'installation et la configuration du framework.</p>
+                    <a href="#" class="project-link">Voir le projet</a>
+                </div>
+            </article>
         </div>
-    </div>
+    </main>
 
-    <!-- Placeholder pour le footer -->
-
-    <div id="footer-container"></div>
-
+    <footer class="footer"></footer>
 </body>
-
 </html>

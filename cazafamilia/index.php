@@ -1,11 +1,22 @@
 <?php
 include "fonction.inc.php";
 session_start();
+
+// Activer l'affichage des erreurs pour le débogage
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // connexion BDD
-$dbh = connexion();
+try {
+    $dbh = connexion();
+} catch (Exception $e) {
+    die("Erreur de connexion à la base de données : " . $e->getMessage());
+}
+
 // selectionner toute la table produit
 if (isset($_SESSION['id_user'])) {
     header("Location: Liste.php");
+    exit();
 }
 
 $sql1 = 'select * from produit';

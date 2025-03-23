@@ -381,3 +381,190 @@ form a:visited {
     color: #000000;
     border-bottom: 1px solid #b3b3b3;
 }
+
+/* Styles modernes pour les formulaires AppFaq */
+.faq-form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faq-input-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.faq-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.faq-input:focus {
+    border-color: #4A90E2;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+.faq-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0 5px;
+    color: #666;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.faq-input:focus ~ .faq-label,
+.faq-input:not(:placeholder-shown) ~ .faq-label {
+    top: 0;
+    transform: translateY(-50%) scale(0.9);
+    background: #ffffff;
+    color: #4A90E2;
+}
+
+/* Bouton moderne pour AppFaq */
+.faq-button {
+    padding: 12px 28px;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faq-button:hover {
+    background: #357ABD;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+.faq-button:active {
+    transform: translateY(0);
+}
+
+/* Style pour les cartes FAQ */
+.faq-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Style pour les messages de notification */
+.notification {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification.success {
+    background: #E3F9E5;
+    color: #1C7C4E;
+    border: 1px solid #A7E9B9;
+}
+
+.notification.error {
+    background: #FFE9E9;
+    color: #CF3333;
+    border: 1px solid #FFBDBD;
+}
+
+/* Style pour la barre de recherche */
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 45px 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* Style pour les tags */
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #EDF2F7;
+    color: #4A5568;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 0 5px 5px 0;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: #E2E8F0;
+    transform: translateY(-1px);
+}
+
+/* Animation de chargement */
+.faq-loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4A90E2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
