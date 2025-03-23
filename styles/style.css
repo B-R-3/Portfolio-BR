@@ -11,6 +11,7 @@
     list-style: none;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 .container1,
@@ -19,6 +20,9 @@
 .contact {
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .agdasima-regular {
@@ -35,6 +39,9 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /*----------BR-------------*/
@@ -81,12 +88,14 @@ body {
     justify-content: center;
     height: 35vh;
     width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 img {
-    width: fit-content;
-    height: 120%;
-    margin: 0 -40px;
+  width: fit-content;
+  height: 100%;
+  margin: 0 -2.4rem;
 }
 
 /*---------------QUI SUIS JE ?------------*/
@@ -102,12 +111,14 @@ h1 {
 .timeline-container img,
 p {
     display: inline;
-    height: 80px;
-    width: 300px;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
 }
 
 .timeline-container {
-    margin: 40px auto;
+    margin: 4% auto;
+    margin-top: 10%;
     text-align: center;
     max-width: 1200px;
     padding: 0 20px;
@@ -231,7 +242,7 @@ p {
 .vrai {
     display: flex;
     justify-content: center;
-    min-height: 400px;
+    min-height: 50vh;
     width: 100%;
     position: relative;
     padding: 20px

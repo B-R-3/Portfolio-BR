@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
 
     var opacity = 1 - scrollPosition / 900;
 
-    var separation = scrollPosition / 2;
+    var separation = scrollPosition / 3;
 
     var delayInMilliseconds = 1000; //1 second
 
