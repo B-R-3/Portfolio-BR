@@ -42,9 +42,11 @@ html, body {
 }
 
 .projets {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
+    background-image: radial-gradient(#000000 0.1%, transparent 1px);
+    background-size: 20px 20px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     z-index: 2;
     margin-top: 60vh;
     position: relative;

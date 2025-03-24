@@ -57,7 +57,9 @@
 
 body {
   font-family: var(--body-font);
-  background-color: var(--body-color);
+  background-color: #ffffff;
+  background-image: radial-gradient(#000000 0.1%, transparent 1px);
+  background-size: 20px 20px;
   color: var(--text-color);
 }
 
@@ -374,6 +376,7 @@ table {
     margin: 20px auto;
     width: 65%;
     border-collapse: collapse;
+    background-color: #fff;
 }
 
 th,

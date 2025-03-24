@@ -34,8 +34,9 @@
 html,
 body {
     scroll-behavior: smooth;
-    background: rgb(255, 255, 255);
-    background-size: 500px;
+    background-color: #ffffff;
+    background-image: radial-gradient(#000000 0.1%, transparent 1px);
+    background-size: 20px 20px;
     background-position: center;
     background-attachment: fixed;
     color: rgb(0, 0, 0);
@@ -250,7 +251,6 @@ p {
 
 .timeline {
     position: absolute;
-    background: white;
     border-radius: 20px;
     padding: 30px;
     opacity: 0;
@@ -388,9 +388,6 @@ p {
   }
 
   .logos {
-    overflow: hidden;
-    padding: 60px 0;
-    background: white;
     white-space: nowrap;
     position: relative;
   }
