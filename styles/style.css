@@ -14,6 +14,51 @@
     box-sizing: border-box;
 }
 
+/* Fond pointillé avec fondu */
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: radial-gradient(#000000 0.01%, transparent 0.01px);
+    background-size: 20px 20px;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.page-background::before,
+.page-background::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.page-background::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.page-background::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Conteneurs principaux */
 .container1,
 .container2,
 .competence,
@@ -34,11 +79,6 @@
 html,
 body {
     scroll-behavior: smooth;
-    background-color: #ffffff;
-    background-image: radial-gradient(#000000 0.1%, transparent 1px);
-    background-size: 20px 20px;
-    background-position: center;
-    background-attachment: fixed;
     color: rgb(0, 0, 0);
     width: 100%;
     max-width: 100vw;
@@ -360,71 +400,41 @@ p {
 
 /*---------------------Stacks--------------------*/
 .stacks {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-.stacks h1 {
-   font-size: 3.5rem;
-    position: relative;
-}
-
-.stacks img:hover {
-    transform: scale(1.1);
-    transition: 0.5s ease-out;
-}
-
-.ad{
-    display: flex;
-    justify-content: center;
+margin-top: 10%;
+text-align: center;
 }
 @keyframes slide {
-    from {
+  from {
       transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
   }
+  to {
+      transform: translateX(-50%); /* Au lieu de 200%, utiliser 50% pour boucler */
+  }
+}
 
-  .logos {
-    white-space: nowrap;
-    position: relative;
-  }
+.logos {
+  overflow: hidden; /* Empêcher le scroll horizontal */
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
+.logos-slide {
+  display: flex;
+  animation: slide 10s linear infinite; /* Animation fluide */
+}
 
-  .logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
 
-  .logos:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
+/* Désactiver le hover pour éviter la pause brutale */
+.logos:hover .logos-slide {
+  animation-play-state: running;
+}
 
-  .logos:hover .logos-slide {
-    animation-play-state: paused;
-  }
-
-  .logos-slide {
-    display: inline-block;
-    animation: 25s slide infinite linear;
-  }
-
-  .logos-slide img {
-    height: 50px;
-    margin: 0 40px;
-  }
 /* Dimensions spécifiques des images */
 #next {
     width: 170px;
