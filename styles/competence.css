@@ -1,11 +1,14 @@
-/*----------------------PGE DE PROJETS----------------*/
+/*----------------------PAGE DE PROJETS----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+/* Importation des styles communs */
+@import url('common.css');
+
 /* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 #competence h1{
     color: black;
@@ -19,7 +22,6 @@
     text-align: center;
     margin: 0;
     font-size: 40px;
-
 }
 
 
@@ -57,16 +59,13 @@
 
 body {
   font-family: var(--body-font);
-  background-color: #ffffff;
-  background-image: radial-gradient(#000000 0.1%, transparent 1px);
-  background-size: 20px 20px;
+  background-color: var(--body-color);
   color: var(--text-color);
 }
 
 img {
   display: block;
   max-width: 100%;
-
 }
 
 /*=============== CARD ===============*/
@@ -131,6 +130,87 @@ img {
   color: var(--first-color);
   text-align: left;
 }
+.modal-content h1{
+    text-align: center;
+    font-size: 35px;
+}
+#modalDescription{
+    text-align: left;
+    font-size: 20rem;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Centrer horizontalement le titre */
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 70%;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.modal-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin: 0;
+}
+
+.modal-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2%;
+  font-size: 1.2rem;
+}
+
+.left-column, .right-column {
+  flex: 0 1 45%; /* Chaque colonne occupe environ 45% de l'espace */
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal-columns {
+      flex-direction: column; /* Passe en mode colonne sur petits écrans */
+      align-items: center;
+  }
+  .left-column, .right-column {
+      flex: 0 1 100%;
+  }
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+      flex-direction: column; /* Les colonnes passent en mode vertical sur petits écrans */
+  }
+  .modal-column {
+      flex: 0 1 100%;
+      margin-bottom: 20px;
+  }
+}
+
 
 .card__button:hover {
   text-decoration: underline;
@@ -223,7 +303,6 @@ img {
   .card__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 7rem;
-
   }
   .card__img {
     width: 348px;
@@ -233,93 +312,9 @@ img {
     padding-inline: 2.5rem;
   }
 }
-/*passage au tableau de compétences*/
-.modal-content h1{
-    text-align: center;
-    font-size: 35px;
-}
-#modalDescription{
-    text-align: left;
-    font-size: 20rem;
-}
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: start; /* Centrer horizontalement le titre */
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 70%;
-  text-align: left;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
-}
-
-.modal-content h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  margin: 0;
-}
-
-.modal-columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2%;
-  font-size: 1.2rem;
-}
-
-.left-column, .right-column {
-  flex: 0 1 45%; /* Chaque colonne occupe environ 45% de l'espace */
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.modal-content .close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  color: black;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .modal-columns {
-      flex-direction: column; /* Passe en mode colonne sur petits écrans */
-      align-items: center;
-  }
-  .left-column, .right-column {
-      flex: 0 1 100%;
-  }
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-h1 {
-
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .modal-content {
-      flex-direction: column; /* Les colonnes passent en mode vertical sur petits écrans */
-  }
-  .modal-column {
-      flex: 0 1 100%;
-      margin-bottom: 20px;
-  }
-}
-
 /*--------------------modal--------------------*/
 .modal {
   display: none;
-
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -376,8 +371,8 @@ h1 {
 table {
     margin: 20px auto;
     width: 65%;
+    background-color: white;
     border-collapse: collapse;
-    background-color: #fff;
 }
 
 th,
@@ -394,6 +389,7 @@ th {
 
 td:not(:empty):not(:first-child) {
     background-color: #d5f5d6;
+    cursor: pointer;
 }
 
 .modal {
@@ -438,33 +434,3 @@ td:not(:empty):not(:first-child) {
 }
 
 /*---------------------FIN DE TABLEAU DE COMPETENCE--------------------*/
-
-/* Styles spécifiques pour le modal des images */
-#imageModal .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 90%;
-    max-height: 90vh;
-}
-
-#imageModal .modal-content img {
-    max-width: 100%;
-    max-height: 65vh;
-    object-fit: contain;
-}
-
-#imageModal .modal-content .close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
