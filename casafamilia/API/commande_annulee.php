@@ -1,6 +1,7 @@
 <?php
 
-include "fonction.inc.php";
+include "../fonction/fonction-db.php";
+include "../fonction/fonction.inc.php";
 session_start();
 
 

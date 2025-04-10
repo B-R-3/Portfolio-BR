@@ -1,6 +1,7 @@
 <?php
 session_start();
-include "fonction.inc.php";
+include "../fonction/fonction-db.php";
+include "../fonction/fonction.inc.php";
 
 // connexion à la base de données
 $dbh = connexion();
@@ -46,7 +47,10 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/validation.css">
+    <link rel="stylesheet" href="../style/components/navbar.css">
+    <link rel="stylesheet" href="../style/components/buttons.css">
+    <link rel="stylesheet" href="../style/base.css">
     <title>Récapitulatif de la commande</title>
 </head>
 

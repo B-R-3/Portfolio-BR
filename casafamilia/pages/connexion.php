@@ -1,5 +1,6 @@
 <?php
-include "fonction.inc.php";
+include "../fonction/fonction-db.php";
+include "../fonction/fonction.inc.php";
 session_start();
 
 // Connexion à la base de données
@@ -29,7 +30,7 @@ if ($submit) {
                 // Mot de passe correct, connexion réussie
                 $_SESSION['id_user'] = $user['id_user']; // Stocke l'ID utilisateur dans la session
                 $_SESSION['login'] = $user['login']; // Stocke le login dans la session
-                header("Location: liste.php"); // Redirige vers une autre page
+                header("Location: ../pages/liste.php"); // Redirige vers une autre page
                 exit();
             // si mot de passe ou ogin inconnu dans la base
             } else {
@@ -44,10 +45,6 @@ if ($submit) {
         $message = "Veuillez remplir tous les champs";
     }
 }
-// redirection vers l'index
-if ($annuler) {
-    header("Location: index.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -57,30 +54,33 @@ if ($annuler) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CazaFamilia</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>CazaFamilia - Connexion</title>
 </head>
 
 <body>
-    <br>
-    <div class="bigcontainer">
-        <div class="container">
-        <!-- creation du formulaire qui renvoie les resultats sur la meme page -->
-            <form id="formulaire" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <h1>Connexion</h1>
-                <label for="login"></label><br>
-                <input type="text" id="login" name="login" placeholder="Identifiant" required><br>
-
-                <label for="mot_de_passe"></label><br>
-                <input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Mot de passe" required><br><br><br>
-
-                <div class="but-general">
-                    <input type="submit" name="submit" value="Connexion" class="wave-button" />
-                    <input type="submit" name="annuler" value="Annuler" class="wave-button" />
-                </div>
-            </form>
-
-            <?php if (!empty($message)) echo "<p>$message</p>"; ?>
+    <div class="main-container">
+        <div class="form-section">
+            <div class="form-container">
+                <h1 class="form-title">Connexion</h1>
+                <form id="formulaire" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <div class="form-group">
+                        <input type="text" id="login" name="login" placeholder="Identifiant" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Mot de passe" required class="form-input">
+                    </div>
+                    <button type="submit" name="submit" class="button form-submit">
+                        <span class="button-content">Se connecter</span>
+                    </button>
+                </form>
+                <?php if (isset($message)): ?>
+                    <p class="error-message"><?php echo $message; ?></p>
+                <?php endif; ?>
+                <p class="form-footer">
+                    Pas encore de compte ? <a href="inscription.php" class="form-link">Inscrivez-vous</a>
+                </p>
+            </div>
         </div>
     </div>
 </body>

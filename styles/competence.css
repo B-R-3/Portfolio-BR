@@ -1,11 +1,14 @@
-/*----------------------PGE DE PROJETS----------------*/
+/*----------------------PAGE DE PROJETS----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+/* Importation des styles communs */
+@import url('common.css');
+
 /* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 #competence h1{
     color: black;
@@ -19,7 +22,6 @@
     text-align: center;
     margin: 0;
     font-size: 40px;
-
 }
 
 
@@ -64,7 +66,6 @@ body {
 img {
   display: block;
   max-width: 100%;
-
 }
 
 /*=============== CARD ===============*/
@@ -196,7 +197,6 @@ ul {
 }
 
 h1 {
-
   margin-bottom: 15px;
   text-align: center;
 }
@@ -303,7 +303,6 @@ h1 {
   .card__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 7rem;
-
   }
   .card__img {
     width: 348px;
@@ -316,7 +315,6 @@ h1 {
 /*--------------------modal--------------------*/
 .modal {
   display: none;
-
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -373,6 +371,7 @@ h1 {
 table {
     margin: 20px auto;
     width: 65%;
+    background-color: white;
     border-collapse: collapse;
 }
 
@@ -390,6 +389,7 @@ th {
 
 td:not(:empty):not(:first-child) {
     background-color: #d5f5d6;
+    cursor: pointer;
 }
 
 .modal {

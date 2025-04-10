@@ -1,19 +1,4 @@
 <?php
-function connexion()
-{
-    $dsn = 'mysql:host=localhost;dbname=u305901407_cazafamilia';
-    $user = 'u305901407_br';
-    $password = 'SoV5UD|d$J5';
-    try {
-        $dbh = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND =>
-        "SET NAMES utf8"));
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $ex) {
-         die("Erreur lors de la connexion SQL : " . $ex->getMessage());
-    }
-    return $dbh;
-}
-
 function verifUtilisateurConnecte()
 {
     // Démarre la session si elle n'a pas encore été démarrée
@@ -42,20 +27,37 @@ function deconnexion()
 <?php
 // Récupération de la page courante
 $current_page = basename($_SERVER['PHP_SELF']);
+$is_index = strpos($_SERVER['PHP_SELF'], 'index.php') !== false;
 
 // Fonction pour générer la navigation dynamiquement
-function afficherNav($liens)
+function afficherNav($liens, $is_index)
 {
-    echo "<nav>";
-    echo '  <div class="logo">';
-    echo '  <a href="index.php"><h1>CazaFamilia</h1></a>';
-    echo '  </div>';
-    echo '  <ul>';
-    foreach ($liens as $texte => $url) {
-        echo "    <li><a href=\"$url\">$texte</a></li>";
+    echo '<nav class="navbar">';
+    echo '    <div class="navbar-brand">';
+    if ($is_index) {
+        echo '        <a href="index.php">CazaFamilia</a>';
+    } else {
+        echo '        <a href="../index.php">CazaFamilia</a>';
     }
-    echo '  </ul>';
-    echo "</nav>";
+    echo '    </div>';
+    echo '    <ul class="navbar-nav">';
+    foreach ($liens as $texte => $url) {
+        if ($is_index) {
+            if ($url === 'index.php') {
+                echo "<li><a href=\"$url\" class=\"nav-link\">$texte</a></li>";
+            } else {
+                echo "<li><a href=\"pages/$url\" class=\"nav-link\">$texte</a></li>";
+            }
+        } else {
+            if ($url === 'index.php') {
+                echo "<li><a href=\"../$url\" class=\"nav-link\">$texte</a></li>";
+            } else {
+                echo "<li><a href=\"$url\" class=\"nav-link\">$texte</a></li>";
+            }
+        }
+    }
+    echo '    </ul>';
+    echo '</nav>';
 }
 
 // Définir les liens de navigation en fonction de la page courante
@@ -94,7 +96,7 @@ switch ($current_page) {
 }
 
 // Affichage du menu
-afficherNav($liens);
+afficherNav($liens, $is_index);
 ?>
 
 <!-- police d'écriture italienne -->

@@ -20,9 +20,9 @@
                     <li><a href="../../index.html#qui">Présentation</a></li>
                     <li><a href="../../pages/competence/competence.html">Référentiel des compétences</a></li>
                     <li><a href="../../pages/projets/projet.html">Projets</a></li>
-                    <li><a href="../../index.html#contact">Contact</a></li>
+                    <li><a href="../../index.html#contact" class="contact-link">Contact</a></li>
                     <li><a href="../../pages/veille/veille.html">Veille technologique</a></li>
-                    <li><a href="../../image/cv_de_brandon.pdf" target="_blank">CV</a></li>
+                    <li><a href="../../image/CV_MOLINA_Brandon.pdf" target="_blank">CV</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,6 +33,17 @@
     document.addEventListener('DOMContentLoaded', () => {
         const burgerMenu = document.querySelector('.burger-menu');
         const menu = document.querySelector('.menu');
+        const contactLink = document.querySelector('.contact-link');
+
+        // Vérifier si on est sur la page d'accueil
+        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+        
+        // Mettre à jour le lien contact en fonction de la page
+        if (isHomePage) {
+            contactLink.href = '#contact';
+        } else {
+            contactLink.href = '../../index.html#contact';
+        }
 
         burgerMenu.addEventListener('click', () => {
             burgerMenu.classList.toggle('active');
