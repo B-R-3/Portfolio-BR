@@ -1,0 +1,48 @@
+/* Import des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Variables de couleurs */
+:root {
+    --color-primary: #D4B08C;
+    --color-secondary: #2C1810;
+    --color-accent: #8B9D83;
+    --color-light: #F5F2ED;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Typographie */
+.italianno-regular {
+    font-family: "Italianno", cursive;
+}
+
+/* Layout principal */
+.main-container {
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+    margin: 0;
+    overflow-x: hidden;
+} 

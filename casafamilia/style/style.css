@@ -1,0 +1,822 @@
+/* Import des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Import des fichiers CSS */
+@import 'base.css';
+@import 'components/buttons.css';
+@import 'components/navbar.css';
+@import 'components/forms.css';
+@import 'layouts/menu.css';
+@import 'layouts/liste.css';
+@import 'layouts/home.css';
+
+/* Variables de couleurs */
+:root {
+    --color-primary: #D4B08C;
+    --color-secondary: #2C1810;
+    --color-accent: #8B9D83;
+    --color-light: #F5F2ED;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Typographie */
+.italianno-regular {
+    font-family: "Italianno", cursive;
+}
+
+/* Layout principal */
+.main-container {
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(44, 24, 16, 0.4);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: "Italianno", cursive;
+    font-size: 3.5em;
+    color: var(--color-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    font-family: "Italianno", cursive;
+    font-size: 2em;
+    color: var(--color-light);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+
+/* Composants UI - Formulaires */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: url('../image/restaurant.jpg') center/cover fixed no-repeat;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    margin-top: -80px;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 24, 16, 0.7);
+    z-index: 1;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--color-light);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+.form-title {
+    text-align: center;
+    color: var(--color-secondary);
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    font-family: 'Italianno', cursive;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-input:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(44, 24, 16, 0.2);
+    background: #fff;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.form-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9em;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Styles pour la page d'accueil */
+.hero-section {
+    height: 100vh;
+    background-image: url('../image/restaurant.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 24, 16, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.restaurant-name {
+    font-family: 'Italianno', cursive;
+    font-size: 6em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-light);
+    font-weight: normal;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.discover-button {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.discover-button:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.presentation-section {
+    padding: 80px 20px;
+    background-color: var(--color-light);
+    text-align: center;
+}
+
+.presentation-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.presentation-title {
+    font-family: 'Italianno', cursive;
+    font-size: 3em;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+}
+
+.presentation-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature {
+    padding: 20px;
+}
+
+.feature-title {
+    font-family: 'Italianno', cursive;
+    font-size: 2em;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.feature-text {
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+/*-----index.php-----*/
+.fond_accueil {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.94)),
+        url("image/shutterstock_789017482.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.titre {
+    width: 50%;
+    height: 35vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre h1 {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 100px;
+}
+
+.txt {
+    width: 100%;
+    height: fit-content;
+    margin-top: 1000px;
+    background-color: rgba(0, 0, 0, 0.565);
+    z-index: 2;
+}
+
+.txt p {
+    color: #fff;
+}
+
+/*----TABLE DE LA CARTE----*/
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 2px solid #7a0600;
+    font-family: "Italianno";
+}
+
+td {
+    padding: 7.9px;
+}
+
+th {
+    letter-spacing: 2px;
+    font-size: 3em;
+    padding: 10px;
+}
+
+td {
+    letter-spacing: 1px;
+    font-size: 1.8em;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}
+.align-left {
+    padding-left: 10%;
+    text-align: left;
+}
+.sylvain{
+    width: 5%;
+}
+/*------------------------------------*/
+.space {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.94)),
+        url(image/pizza_naples.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.suite {
+    margin-top: 100px;
+    height: fit-content;
+    width: 80%;
+    position: absolute;
+}
+
+.suite h1 {
+    font-weight: lighter;
+}
+
+.liste {
+    display: flex;
+    justify-content: center;
+}
+
+.liste table {
+    height: fit-content;
+    width: 80%;
+    background-color: #ffffffcf;
+}
+
+/*----LOGin--*/
+.bigcontainer {
+    height: 100vh;
+    width: 100%;
+    /*background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.94)),
+        url(image/shutterstock_789017482.jpeg);*/
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+/*-----button------*/
+
+/*-----LISTE------*/
+.qte {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.94)),
+        url(image/pizza_naples.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-----confirmation-------!!!*/
+
+/* Styles pour la page Menu */
+.menu-container {
+    padding: 2rem;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: url('../image/restaurant.jpg') center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px;
+}
+
+.menu-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 24, 16, 0.7);
+    z-index: 1;
+}
+
+.menu-title {
+    font-family: 'Italianno', cursive;
+    font-size: 4em;
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    font-weight: lighter;
+}
+
+.menu-table {
+    width: 70%;
+    border-collapse: collapse;
+    background: rgba(245, 242, 237, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(44, 24, 16, 0.1);
+}
+
+.menu-table th {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    font-family: 'Italianno', cursive;
+    font-size: 2.5em;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu-table th:last-child,
+.menu-table td:last-child {
+    text-align: right;
+}
+
+#liste td:last-child {
+    text-align: center;
+}
+
+.menu-table td {
+    font-size: 1.8em;
+    color: var(--color-secondary);
+    line-height: 1.4;
+    position: relative;
+}
+
+.menu-table tr:hover {
+    background-color: rgba(212, 176, 140, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Ajustement du bouton Commander dans le menu */
+.menu-container .button {
+    position: relative;
+    z-index: 2;
+}
+
+/* Styles pour la page Liste */
+.liste-container {
+    padding: 2rem;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: url('../image/restaurant.jpg') center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px;
+}
+
+.liste-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 24, 16, 0.7);
+    z-index: 1;
+}
+
+.liste-title {
+    font-family: 'Italianno', cursive;
+    font-size: 4em;
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    font-weight: lighter;
+}
+
+.liste-table {
+    width: 80%;
+    border-collapse: collapse;
+    background: rgba(245, 242, 237, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.liste-table th,
+.liste-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(44, 24, 16, 0.1);
+}
+
+.liste-table th {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    font-family: 'Italianno', cursive;
+    font-size: 2.5em;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: normal;
+}
+
+.liste-table td {
+    font-size: 1.8em;
+    color: var(--color-secondary);
+    line-height: 1.4;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+.liste-table tr:hover {
+    background-color: rgba(212, 176, 140, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.liste-form {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.type-conso {
+    background: rgba(245, 242, 237, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.type-conso-title {
+    font-family: 'Italianno', cursive;
+    font-size: 2.8em;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+.type-conso label {
+    margin: 0 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.type-conso input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Input Quantité Moderne */
+.qte-input {
+    width: 100px;
+    height: 45px;
+    padding: 0.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+    color: var(--color-secondary);
+    -moz-appearance: textfield;
+}
+
+.qte-input::-webkit-outer-spin-button,
+.qte-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.qte-input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(44, 24, 16, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Radio Boutons Modernes */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.radio-label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: var(--color-secondary);
+    user-select: none;
+}
+
+.radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-custom {
+    position: absolute;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.radio-label:hover input ~ .radio-custom {
+    border-color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+.radio-label input:checked ~ .radio-custom {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.radio-custom::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+}
+
+.radio-label input:checked ~ .radio-custom::after {
+    display: block;
+}
+
+/* Boutons de la page liste */
+.liste-button {
+    position: relative;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    min-width: 200px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.liste-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+
+.liste-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-primary);
+}
+
+.liste-button:hover::before {
+    transform: translateX(100%);
+}
+
+.liste-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button {
+    background-color: var(--color-secondary);
+}
+
+.cancel-button {
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.cancel-button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+
+

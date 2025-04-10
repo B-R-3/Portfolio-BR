@@ -1,0 +1,111 @@
+/* Styles améliorés pour validation.php */
+/* Import des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Import des fichiers CSS */
+@import 'base.css';
+
+
+/* Variables de couleurs */
+:root {
+    --color-primary: #D4B08C;
+    --color-secondary: #2C1810;
+    --color-accent: #8B9D83;
+    --color-light: #F5F2ED;
+}
+
+
+.bigcontainer {
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.suite {
+    margin-top: 100px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.suite h1 {
+    font-family: 'Italianno', cursive;
+    font-size: 3.5em;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.liste table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2.5rem;
+    background-color: rgba(245, 242, 237, 0.95);
+    border-radius: 10px;
+    font-family: 'Italianno', cursive;
+    font-weight: lighter;
+    overflow: hidden;
+}
+
+.liste th, .liste td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(44, 24, 16, 0.1);
+}
+
+.liste th {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    font-size: 2em;
+    font-weight: lighter;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.liste td {
+    font-size: 1.4em;
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.conso {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.wave-button {
+    padding: 1.2rem 2.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wave-button:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    color: #666;
+    margin: 30px 0;
+    font-size: 1.2em;
+}
+
+strong {
+    color: #2c3e50;
+}

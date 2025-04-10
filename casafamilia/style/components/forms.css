@@ -1,0 +1,98 @@
+/* Styles pour les formulaires */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: url('../image/restaurant.jpg') center/cover fixed no-repeat;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    margin-top: -80px;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 24, 16, 0.7);
+    z-index: 1;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--color-light);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+.form-title {
+    text-align: center;
+    color: var(--color-secondary);
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    font-family: 'Italianno', cursive;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-input:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(44, 24, 16, 0.2);
+    background: #fff;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.form-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9em;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: none;
+} 
