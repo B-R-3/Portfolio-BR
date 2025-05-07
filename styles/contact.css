@@ -13,11 +13,28 @@
 
 /*----------------------CONTACT--------------------------*/
 .contact {
-    padding: 40px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('../image/apo.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, #808080 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    pointer-events: none;
+    background-position: 0 0, 10px 10px;
+
 }
 
 .contact form {

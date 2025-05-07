@@ -419,6 +419,7 @@ p {
   }
 
   .logos {
+    background: linear-gradient(#ffffff26, #f4f4f5cf);
     overflow: hidden;
     padding: 60px 0;
     white-space: nowrap;
@@ -435,7 +436,7 @@ p {
     z-index: 2;
   }
 
-  .logos:before {
+ /* .logos:before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
   }
@@ -444,7 +445,7 @@ p {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   }
-
+*/
   .logos:hover .logos-slide {
     cursor: pointer;
   }
